@@ -1,0 +1,10 @@
+services:
+    freebox-exporter:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: anthonymasset/freebox-exporter
+        ports:
+            - "9091:9091"
+        volumes:
+            - ./config:/config
